@@ -13,6 +13,7 @@ function Project(props) {
   const { _rawBody, title, categories, mainImage, members, publishedAt, relatedProjects } = props;
   return (
     <article className={styles.root}>
+      <Container>
       {props.mainImage && mainImage.asset && (
         <div className={styles.mainImage}>
           <img
@@ -25,7 +26,6 @@ function Project(props) {
           />
         </div>
       )}
-      <Container>
         <div className={styles.grid}>
           <div className={styles.mainContent}>
             <h1 className={styles.title}>{title}</h1>
